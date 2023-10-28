@@ -35,7 +35,7 @@ class MemoController extends Controller
         $memo->save();
 
         // 登録したらindexに戻る
-        return redirect('/memos');
+        return redirect(route('memos.index'));
     }
 
     public function show($id)
