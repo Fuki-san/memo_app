@@ -43,4 +43,12 @@ class MemoController extends Controller
         $memo = Memo::find($id);
         return view('memos.show', ['memo' => $memo]);
     }
+    //$idとすることで
+    public function edit($id)
+    {
+            //memoクラスからデータを取得するメソッドfind
+        $memo = Memo::find($id);
+        // dd($memo);
+        return view('memos.edit', ['memo' => $memo]);
+    }
 }
