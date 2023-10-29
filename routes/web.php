@@ -13,4 +13,5 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/', [App\Http\Controllers\MemoController::class, 'index']);
 Route::resource('memos', MemoController::class);
