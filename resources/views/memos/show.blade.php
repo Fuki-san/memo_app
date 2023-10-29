@@ -8,7 +8,7 @@
 </head>
 <body>
     <a href="{{ route('memos.index') }}">戻る</a>
-    <h1>{{ route('memos.index') }}</h1>
+    <h1>{{ $memo->title }}</h1>
     <p>{!! nl2br(e($memo->body)) !!}</p>
     {{-- $memoのidをもとに編集ページへ遷移する --}}
     <button onclick='location.href = "{{ route("memos.edit", $memo) }}"'>編集する</button>
